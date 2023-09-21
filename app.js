@@ -1,9 +1,12 @@
-let valueTarjetaEjemplo = document.getElementById("#tarjetaEjemplo")
-const boton = document.querySelector(".btn-primary");
-const parrafo = document.querySelector("#parrafo");
-console.log(valueTarjetaEjemplo)
+let valueTarjetaEjemplo = document.getElementById("tarjetaEjemplo")
+const boton = document.getElementById("boton");
+let parrafo = document.querySelector("#parrafo");
 
 
-boton.addEventListener("click", () => {
-parrafo.textContent.replace = valueTarjetaEjemplo;
-});
+
+boton.addEventListener("click", cambiarColor(valueTarjetaEjemplo));
+
+function cambiarColor() {
+    console.log(valueTarjetaEjemplo.value);
+    parrafo.textContent = valueTarjetaEjemplo.value;
+}
