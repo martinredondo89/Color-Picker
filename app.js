@@ -1,12 +1,26 @@
-let valueTarjetaEjemplo = document.getElementById("tarjetaEjemplo")
+let inputTarjetaEjemplo = document.querySelectorAll("tarjetaEjemplo")
 const boton = document.getElementById("boton");
-let parrafo = document.querySelector("#parrafo");
+let display = document.querySelector("#display");
+console.log(inputTarjetaEjemplo.value);
 
 
 
-boton.addEventListener("click", cambiarColor(valueTarjetaEjemplo));
+boton.addEventListener("click", cambiarColor(inputTarjetaEjemplo[0].value));
 
-function cambiarColor() {
-    console.log(valueTarjetaEjemplo.value);
-    parrafo.textContent = valueTarjetaEjemplo.value;
+function cambiarColor(color) {
+
+    display.innerText =  color
 }
+/*
+const sumar = (numA, numB) => numA + numB;
+const buttonSuma = document.querySelector('#sumar');
+
+buttonSuma.addEventListener('click', () => {
+    const numeros = document.querySelectorAll('input');
+    const display = document.querySelector('#display');
+
+    const resultado = sumar(parseFloat(numeros[0].value), parseFloat(numeros[1].value));
+    display.innerText = resultado;
+
+})
+*/
